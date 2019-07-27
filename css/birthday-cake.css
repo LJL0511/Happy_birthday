@@ -55,6 +55,8 @@ body {
   left: 0;
 }
 
+
+
 /* ============================================== Fire
 */
 .fuego {
@@ -331,3 +333,45 @@ a.lk2:hover {
 	border:2px solid #BBB;
 	transition:all 0.8s;
 }
+
+
+
+/*模糊发光文字动画特效*/
+.text-effect{
+    color: #fff;
+    font-family: 'Frijole', cursive;
+    font-size: 80px;
+/*    text-transform: uppercase;*/
+    text-align: center;
+    letter-spacing: 8px;
+    margin: 30px auto 0;
+    animation: 4s animate infinite linear;
+}
+@keyframes animate{
+    0%{ text-shadow: 0 0 0 white; }
+    40%{
+        color: rgba(255,255,255,0);
+        text-shadow: 0 0 30px white;
+    }
+    70%{
+        color: rgba(255,255,255,0.4);
+        text-shadow: 0 0 10px white;
+    }
+    90%{
+        color: rgba(255,255,255,0.6);
+        text-shadow: 0 0 30px white;
+    }
+    100%{ text-shadow: 0 0 40px rgba(255,255,255,0); }
+}
+@media only screen and (max-width: 990px){
+    .text-effect{ font-size: 80px; }
+}
+@media only screen and (max-width: 767px){
+    .text-effect{ font-size: 40px; }
+}
+@media only screen and (max-width: 479px){
+    .text-effect{ font-size: 30px; }
+}
+@media only screen and (max-width: 359px){
+    .text-effect{ font-size: 25px; }
+}                  
